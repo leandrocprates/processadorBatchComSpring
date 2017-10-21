@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+  
+    <Console name="Console" target="SYSTEM_OUT">
+      	<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    
+    <RollingFile name="RollingFile" fileName="C:/Users/lprates/Desktop/springBatch/logBatch.log"
+                     filePattern="C:/Users/lprates/Desktop/springBatch/logBatch.log-%d{MM-dd-yyyy}-%i.log.gz">
+          <PatternLayout>
+            <Pattern>%d %p [%t] %-5level %logger{36} - %m%n</Pattern>
+          </PatternLayout>
+          <Policies>
+            <TimeBasedTriggeringPolicy />
+            <SizeBasedTriggeringPolicy size="250 MB"/>
+          </Policies>
+          <DefaultRolloverStrategy max="20"/>
+    </RollingFile>    
+    
+    <Async name="Async">
+      	<AppenderRef ref="RollingFile"/>
+    </Async>    
+    
+  </Appenders>
+  
+  <Loggers>
+    <Root level="trace">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="Async"/>
+    </Root>
+  </Loggers>
+  
+</Configuration>
+
+
