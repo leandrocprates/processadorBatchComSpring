@@ -48,9 +48,14 @@ public class ThreadMessageSaida implements Runnable{
                 
                 for ( ChatEntradaSaida chatEntradaSaida :  listaChatEntradaSaida ){
                     
-                    FcmData fcmData = criarMessageData(chatEntradaSaida); 
                     
-                    int codigoResposta = httpClient.criarRequisicao(fcmData);
+                    chatEntradaSaida.setToken("dvveubohvVU:APA91bGaAGUmEYHurCHXeiivbO4m2dVg64TY3yj4b7ZFPDLLORdYocDi4Ta2VX_CQuAA3tJhW6_9pK021ypmqr4g8LWDCNqdZSDb5Ul264ROUx5ZTnDhNi7j6vycI03EWYlofdRUpNGq");
+                    
+                    //FcmData fcmData = criarMessageData(chatEntradaSaida); 
+                    
+                    FcmNotificacao fcmNotificacao = criarNotificacao(chatEntradaSaida); 
+                    
+                    int codigoResposta = httpClient.criarRequisicao(fcmNotificacao);
                     
                     if ( codigoResposta == HttpEnum.HTTP_OK.code ){
                         logger.debug("Resposta OK");
