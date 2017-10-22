@@ -2,7 +2,7 @@
 
 
 
-Este projeto tem por objectivo  a criaçaõ de um processo batch utilizando spring para carregar arquivos de configuracao e acesso ao banco de dados e enviar mensagem para o FCM (Firebase Cloud Message).   
+Este projeto tem por objectivo  a criação de um processo batch utilizando spring para carregar arquivos de configuracao e acesso ao banco de dados e enviar mensagem para o FCM (Firebase Cloud Message).   
 
 - Mysql - Banco de Dados 
 - Lombok - Para geração de Getter e Setter automaticos 
