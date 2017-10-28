@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- *
+ * executar como batch :   java -cp .;batch-1.0.jar  br.com.fnt.esb.webchat.batch.Main 
  * @author leandro.prates
  */
 public class Main {
