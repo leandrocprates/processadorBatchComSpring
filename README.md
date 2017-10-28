@@ -1,6 +1,8 @@
 # processadorBatchComSpring
 
 
+Executar processo batch :  **java -cp .;batch-1.0.jar  br.com.fnt.esb.webchat.batch.Main**
+
 
 Este projeto tem por objectivo  a criação de um processo batch utilizando spring para carregar arquivos de configuracao e acesso ao banco de dados e enviar mensagem para o FCM (Firebase Cloud Message).   
 
